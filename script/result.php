@@ -1,0 +1,608 @@
+<?php
+$checi = 
+array(
+	"33"=> array(
+			'一汽-大众奥迪'=>
+			array(array(2951,'奥迪Q3'),array(509,'奥迪A6'),array(812,'奥迪Q5'),array(692,'奥迪A4L'),array(18,'奥迪A6L'),array(19,'奥迪A4')),
+			'奥迪(进口)'=>
+			array(array(146,'奥迪A8'),array(148,'奥迪TT'),array(412,'奥迪Q7'),array(471,'奥迪A4(进口)'),array(472,'奥迪A6(进口)'),array(370,'奥迪A3(进口)'),array(740,'奥迪A7'),array(511,'奥迪R8'),array(538,'奥迪A5'),array(593,'奥迪Q5(进口)'),array(650,'奥迪A1'),array(2264,'奥迪Q3(进口)'),array(2734,'奥迪S5'),array(2736,'奥迪S6'),array(2738,'奥迪S7'),array(2739,'奥迪S8'),array(2740,'奥迪TTS')),
+			'奥迪RS'=>
+			array(array(2735,'奥迪RS 5')),
+			'其它'=>
+			array(array(100006,'奥迪200'),array(100007,'奥迪100'),array(100014,'Allroad'))
+	),
+	"34"=>array(
+			'阿尔法罗密欧'=>
+			array(array(400,'ALFA 166'),array(401,'ALFA GT'),array(179,'ALFA 156'))
+	),
+	"35"=>array(
+			'阿斯顿·马丁'=>
+			array(array(266,'阿斯顿·马丁DB9'),array(582,'阿斯顿·马丁DBS'),array(923,'Rapide'),array(822,'V12 Vantage'),array(385,'V8 Vantage'),array(386,'Vanquish'),array(2846,'V12 Zagato'),array(2275,'Virage'))
+	),
+	"36"=>array(
+			'北京奔驰'=>
+			array(array(2562,'奔驰GLK级'),array(197,'奔驰E级'),array(588,'奔驰C级')),
+			'福建奔驰'=>
+			array(array(2564,'凌特'),array(2034,'唯雅诺'),array(2084,'威霆')),
+			'奔驰(进口)'=>
+			array(array(595,'奔驰GLK级(进口)'),array(683,'奔驰CL级'),array(267,'奔驰SLK级'),array(235,'奔驰CLK级'),array(237,'奔驰SL级'),array(52,'奔驰A级'),array(56,'奔驰C级(进口)'),array(57,'奔驰M级'),array(59,'奔驰S级'),array(60,'奔驰G级'),array(365,'奔驰CLS级'),array(398,'奔驰B级'),array(467,'奔驰GL级'),array(469,'奔驰R级'),array(450,'奔驰E级(进口)'),array(2005,'Sprinter'),array(300,'唯雅诺(进口)'),array(192,'威霆(进口)')),
+			'奔驰AMG'=>
+			array(array(914,'奔驰SLS级AMG'),array(2197,'奔驰S级AMG'),array(2717,'奔驰C级AMG'),array(2718,'奔驰E级AMG'),array(2719,'奔驰CLS级AMG'),array(2720,'奔驰SL级AMG'),array(2721,'奔驰SLK级AMG'),array(2722,'奔驰M级AMG'),array(2723,'奔驰G级AMG'),array(2833,'奔驰GL级AMG'))
+),
+	"37"=>array(
+			'布加迪'=>
+			array(array(390,'威航'))
+),
+	"38"=>array(
+			'通用别克'=>
+			array(array(2896,'昂科拉ENCORE'),array(166,'别克GL8'),array(164,'君威'),array(834,'君越'),array(875,'凯越'),array(525,'林荫大道'),array(344,'荣御'),array(982,'英朗')),
+			'别克(进口)'=>
+			array(array(592,'昂科雷')),
+			'其它'=>
+			array(array(100011,'别克新世纪'))
+),
+	"39"=>array(
+			'宾利'=>
+			array(array(3014,'飞驰'),array(901,'慕尚'),array(305,'欧陆'),array(306,'雅致'))
+),
+	"40"=>array(
+			'保时捷'=>
+			array(array(168,'Boxster'),array(162,'保时捷911'),array(415,'Cayman'),array(172,'卡宴'),array(703,'Panamera'))
+),
+	"75"=>array(
+			'比亚迪'=>
+			array(array(579,'比亚迪F0'),array(540,'比亚迪F6'),array(489,'比亚迪S8'),array(831,'比亚迪e6'),array(798,'比亚迪M6'),array(940,'比亚迪F3R'),array(927,'比亚迪G3'),array(407,'比亚迪F3'),array(997,'比亚迪G3R'),array(2088,'比亚迪S6'),array(2091,'比亚迪G6'),array(2085,'比亚迪L3'),array(417,'福莱尔'),array(2806,'速锐'),array(2944,'思锐'))
+),
+	"95"=>array(
+			'一汽奔腾'=>
+			array(array(632,'奔腾B50'),array(466,'奔腾B70'),array(3000,'奔腾X80'),array(2310,'奔腾B90'))
+),
+	"13"=>array(
+			'东风标致'=>
+			array(array(437,'标致206'),array(99,'标致307'),array(877,'标致308'),array(688,'标致207'),array(2299,'标致508'),array(987,'标致408'),array(2619,'标致3008')),
+			'标致(进口)'=>
+			array(array(2472,'标致4008'),array(2047,'标致RCZ'),array(689,'标致308(进口)'),array(724,'标致3008(进口)'),array(640,'标致207(进口)'),array(184,'标致206(进口)'),array(185,'标致407'),array(186,'标致607'),array(277,'标致307(进口)'))
+),
+	"14"=>array(
+			'东风本田'=>
+			array(array(2565,'艾力绅'),array(314,'本田CR-V'),array(3104,'杰德'),array(135,'思域'),array(859,'思铂睿')),
+			'广汽本田'=>
+			array(array(880,'奥德赛'),array(694,'锋范'),array(81,'飞度'),array(2168,'歌诗图'),array(3085,'凌派'),array(449,'思迪'),array(78,'雅阁')),
+			'本田(进口)'=>
+			array(array(897,'本田CR-Z'),array(900,'飞度(进口)'),array(723,'INSIGHT'),array(231,'里程'),array(233,'时韵'))
+),
+	"15"=>array(
+			'华晨宝马'=>
+			array(array(65,'宝马5系'),array(66,'宝马3系'),array(2561,'宝马X1')),
+			'宝马(进口)'=>
+			array(array(2963,'宝马3系GT'),array(2847,'宝马5系GT'),array(270,'宝马6系'),array(271,'宝马X3'),array(202,'宝马5系(进口)'),array(153,'宝马7系'),array(159,'宝马X5'),array(161,'宝马Z4'),array(317,'宝马3系(进口)'),array(373,'宝马1系'),array(675,'宝马X1(进口)'),array(587,'宝马X6')),
+			'宝马M'=>
+			array(array(2725,'宝马1系M'),array(2726,'宝马M5'),array(2727,'宝马M6'),array(2728,'宝马X5 M'),array(2729,'宝马X6 M'),array(2196,'宝马M3'))
+),
+	"27"=>array(
+			'北京汽车'=>
+			array(array(2252,'北京汽车E系列'))
+),
+	"120"=>array(
+			'上汽通用五菱'=>
+			array(array(2236,'宝骏630'),array(155,'乐驰'))
+),
+	"140"=>array(
+			'巴博斯'=>
+			array(array(2446,'巴博斯 SLK级'),array(2447,'巴博斯 CLS级'),array(2444,'巴博斯 S级'),array(2575,'巴博斯 M级'))
+),
+	"143"=>array(
+			'北京汽车'=>
+			array(array(2482,'北汽威旺306'),array(2943,'北汽威旺205'))
+),
+	"154"=>array(
+			'北京汽车制造厂'=>
+			array(array(3035,'BJ 212'),array(2959,'陆铃'),array(966,'陆霸'),array(852,'骑士S12'),array(2915,'锐铃'),array(2960,'越铃'),array(2126,'域胜007'),array(622,'勇士'),array(965,'战旗'))
+),
+	"163"=>array(
+			'长安汽车'=>
+			array(array(2604,'长安之星S460'),array(2605,'长安之星2'),array(2606,'长安星光4500'),array(2600,'长安之星'),array(2504,'长安星光'),array(3155,'长安星卡'),array(2505,'金牛星'),array(2566,'欧诺'),array(2954,'欧力威'),array(2923,'神骐'))
+),
+	"79"=>array(
+			'昌河汽车'=>
+			array(array(76,'爱迪尔'),array(3058,'福运'),array(2478,'福瑞达'))
+),
+	"76"=>array(
+			'长安汽车'=>
+			array(array(2045,'奔奔MINI'),array(2046,'奔奔LOVE'),array(484,'奔奔i'),array(1008,'长安CX30'),array(2119,'长安CX20'),array(2778,'长安CS35'),array(520,'杰勋'),array(2785,'睿骋'),array(2788,'悦翔V5'),array(2429,'逸动'),array(2567,'悦翔V3'),array(705,'悦翔'),array(590,'志翔'),array(3033,'致尚XT'))
+),
+	"77"=>array(
+			'长城汽车'=>
+			array(array(2200,'长城V80'),array(2304,'长城M4'),array(2120,'长城C50'),array(2122,'长城C20R'),array(2001,'长城M2'),array(2090,'长城C30'),array(491,'长城精灵'),array(535,'长城M1'),array(2459,'风骏3'),array(2462,'风骏5'),array(2653,'金迪尔'),array(536,'嘉誉'),array(493,'酷熊'),array(624,'凌傲'),array(552,'赛影'),array(6,'赛弗'),array(492,'炫丽'))
+),
+	"81"=>array(
+			'东南汽车'=>
+			array(array(2530,'得利卡'),array(126,'菱帅'),array(606,'V3菱悦'),array(2769,'V5菱致'),array(2776,'V6菱仕'),array(2477,'希旺'))
+),
+	"41"=>array(
+			'东南汽车'=>
+			array(array(574,'凯领')),
+			'道奇(进口)'=>
+			array(array(2198,'道奇Ram'),array(576,'锋哲'),array(575,'酷搏'),array(602,'酷威'))
+),
+	"92"=>array(
+			'一汽吉林'=>
+			array(array(545,'森雅'))
+),
+	"32"=>array(
+			'东风汽车'=>
+			array(array(3166,'虎视'),array(560,'汗马'),array(2901,'俊风CV03'),array(2839,'御风')),
+			'其它'=>
+			array(array(100010,'风行'))
+),
+	'1'=>array(
+			'上海大众'=>
+			array(array(144,'高尔'),array(614,'朗逸'),array(3103,'朗行'),array(528,'帕萨特'),array(826,'Passat领驭'),array(145,'POLO'),array(149,'桑塔纳经典'),array(207,'桑塔纳志俊'),array(2922,'桑塔纳'),array(333,'途安'),array(874,'途观')),
+			'一汽-大众'=>
+			array(array(633,'宝来'),array(15,'宝来/宝来经典'),array(871,'高尔夫'),array(16,'捷达'),array(360,'开迪'),array(496,'迈腾'),array(442,'速腾'),array(905,'一汽-大众CC')),
+			'大众(进口)'=>
+			array(array(700,'大众CC'),array(430,'大众Eos'),array(372,'高尔夫(进口)'),array(224,'辉腾'),array(210,'甲壳虫'),array(539,'迈腾(进口)'),array(631,'迈特威'),array(368,'Passat'),array(669,'尚酷'),array(557,'Tiguan'),array(82,'途锐'),array(86,'夏朗')),
+			'其它'=>
+			array(array(100004,'都市高尔夫'),array(100002,'帕萨特B4'),array(100008,'桑塔纳2000'),array(100030,'T5'))
+),
+	"165"=>array(
+			'东风风行'=>
+			array(array(2742,'景逸SUV'),array(3128,'景逸X5'),array(554,'景逸'),array(2540,'菱智'))
+),
+	"142"=>array(
+			'东风渝安'=>
+			array(array(2865,'东风小康C37'),array(3036,'东风小康C35'),array(2490,'东风小康V07S'),array(2491,'东风小康V21'),array(2497,'东风小康K02'),array(2498,'东风小康K06'),array(2499,'东风小康K17'),array(2500,'东风小康K07'),array(2501,'东风小康K07II'),array(2494,'东风小康V22'),array(2495,'东风小康V27'),array(2744,'东风小康V29'),array(2452,'东风小康K01'))
+),
+	"113"=>array(
+			'东风乘用车'=>
+			array(array(790,'风神S30'),array(1006,'风神H30'),array(2556,'风神A60'))
+),
+	"169"=>array(
+			'长安标致雪铁龙'=>
+			array(array(2952,'DS5')),
+			'雪铁龙(进口)'=>
+			array(array(2078,'DS4'),array(2314,'DS5(进口)'),array(898,'DS3'))
+),
+	"187"=>array(
+			'郑州日产'=>
+			array(array(561,'奥丁'),array(2510,'锐骐皮卡'),array(2512,'锐骐多功能车'),array(951,'帅客'),array(562,'御轩'))
+),
+	"141"=>array(
+			'福迪汽车'=>
+			array(array(2453,'探索者6'),array(2454,'探索者Ⅱ'),array(2455,'探索者Ⅲ'),array(2475,'小超人'),array(2894,'雄狮'),array(2895,'雄狮F16'))
+),
+	"3"=>array(
+			'广汽丰田'=>
+			array(array(771,'汉兰达'),array(110,'凯美瑞'),array(505,'雅力士'),array(2237,'逸致')),
+			'一汽丰田'=>
+			array(array(770,'丰田RAV4'),array(882,'皇冠'),array(109,'花冠'),array(526,'卡罗拉'),array(2527,'柯斯达'),array(45,'兰德酷路泽'),array(46,'普拉多'),array(371,'普锐斯'),array(375,'锐志'),array(170,'特锐'),array(111,'威驰')),
+			'丰田(进口)'=>
+			array(array(2107,'埃尔法'),array(2574,'丰田86'),array(206,'丰田RAV4(进口)'),array(513,'FJ 酷路泽'),array(549,'汉兰达(进口)'),array(964,'红杉'),array(2607,'HIACE'),array(2244,'杰路驰'),array(963,'凯美瑞(海外)'),array(550,'兰德酷路泽(进口)'),array(107,'普瑞维亚'),array(334,'普拉多(进口)'),array(983,'Sienna'),array(2354,'坦途'),array(762,'Venza威飒')),
+			'其它'=>
+			array(array(100016,'丰田佳美'))
+),
+	"8"=>array(
+			'长安福特'=>
+			array(array(364,'福克斯'),array(659,'嘉年华'),array(577,'蒙迪欧-致胜'),array(498,'麦柯斯'),array(117,'蒙迪欧'),array(2863,'翼虎'),array(2871,'翼搏'),array(3175,'致胜')),
+			'江铃汽车'=>
+			array(array(2523,'经典全顺'),array(2524,'新世代全顺')),
+			'福特(进口)'=>
+			array(array(2353,'福特F-150'),array(2302,'福特E350'),array(378,'福特GT'),array(704,'福克斯(进口)'),array(713,'嘉年华(进口)'),array(684,'锐界'),array(2024,'探险者'),array(97,'翼虎/Kuga'),array(102,'野马'),array(2025,'征服者'))
+),
+	"11"=>array(
+			'广汽菲亚特'=>
+			array(array(2767,'菲翔')),
+			'南京菲亚特'=>
+			array(array(89,'派力奥'),array(465,'派朗'),array(90,'西耶那'),array(91,'周末风')),
+			'菲亚特(进口)'=>
+			array(array(542,'博悦'),array(601,'菲亚特500'),array(2262,'菲跃'),array(544,'领雅'),array(543,'朋多')),
+			'其它'=>
+			array(array(100017,'乌诺'))
+),
+	"96"=>array(
+			'福田汽车'=>
+			array(array(2535,'风景'),array(2542,'蒙派克E'),array(3089,'蒙派克S'),array(661,'迷迪'),array(2579,'萨普'),array(2577,'拓陆者'))
+),
+	"42"=>array(
+			'法拉利'=>
+			array(array(676,'California'),array(889,'法拉利458'),array(459,'法拉利599'),array(308,'法拉利575M'),array(367,'法拉利612'),array(359,'法拉利F430'),array(361,'法拉利360'),array(2261,'法拉利FF'),array(2682,'F12berlinetta'))
+),
+	"82"=>array(
+			'广汽乘用车'=>
+			array(array(2560,'传祺GS5'),array(2141,'传祺GA5'),array(3069,'传祺GA3'))
+),
+	"116"=>array(
+			'光冈自动车'=>
+			array(array(2093,'大蛇'),array(2095,'嘉路'),array(2094,'女王'))
+),
+	"112"=>array(
+			'GMC'=>
+			array(array(980,'Savana'),array(2355,'Sierra'),array(955,'Terrain'))
+),
+	"108"=>array(
+			'广汽吉奥'=>
+			array(array(2114,'奥轩G3'),array(2306,'奥轩G5'),array(2774,'奥轩GX5'),array(2599,'财运100'),array(2568,'财运500'),array(2571,'财运300'),array(969,'吉奥凯旋'),array(865,'凯睿'),array(864,'帅舰'),array(967,'帅驰'),array(968,'帅威'),array(1015,'帅豹'),array(2488,'星旺'),array(2885,'星旺CL'),array(3159,'星旺L'),array(3134,'星朗'),array(3139,'星旺M1'),array(3140,'星旺M2'))
+),
+	"150"=>array(
+			'苏州金龙'=>
+			array(array(2572,'海格大海狮'),array(3149,'龙威'),array(2673,'御骏'))
+),
+	"164"=>array(
+			'恒天汽车'=>
+			array(array(2973,'途腾T3'),array(2754,'途腾T1'),array(2755,'途腾T2'))
+),
+	"181"=>array(
+			'长城汽车'=>
+			array(array(2027,'哈弗H5'),array(2123,'哈弗H6'),array(395,'哈弗H3'))
+),
+	"43"=>array(
+			'悍马'=>
+			array(array(379,'悍马H3'),array(38,'悍马H2'))
+),
+	"97"=>array(
+			'曙光汽车'=>
+			array(array(2517,'傲骏'),array(2212,'翱龙CUV'),array(2515,'大柴神'),array(2160,'旗胜V3'),array(673,'旗胜F1'),array(2211,'挑战者SUV'),array(2516,'小柴神'))
+),
+	"91"=>array(
+			'一汽红旗'=>
+			array(array(428,'红旗盛世'),array(2771,'红旗H7'),array(556,'新明仕')),
+			'其它'=>
+			array(array(100005,'红旗'))
+),
+	"85"=>array(
+			'华普汽车'=>
+			array(array(856,'海悦'),array(862,'海景'),array(570,'海锋'),array(507,'海炫'),array(194,'海迅'),array(460,'海域'),array(461,'海尚'))
+),
+	"86"=>array(
+			'海马汽车'=>
+			array(array(470,'福美来'),array(47,'海福星'),array(527,'海马3'),array(823,'海马骑士'),array(696,'欢动'),array(3075,'海马S7'),array(2941,'海马M3'),array(844,'普力马'),array(824,'丘比特')),
+			'海马郑州'=>
+			array(array(3160,'福仕达鸿达'),array(3162,'福仕达腾达'),array(3163,'福仕达福卡'),array(2481,'福仕达荣达'),array(2318,'海马爱尚'),array(855,'海马王子'))
+),
+	"87"=>array(
+			'华泰汽车'=>
+			array(array(2144,'宝利格'),array(2108,'华泰B11'),array(2133,'路盛E70'),array(477,'圣达菲'),array(290,'特拉卡'))
+),
+	"24"=>array(
+			'哈飞汽车'=>
+			array(array(2487,'哈飞小霸王'),array(2485,'骏意'),array(2536,'路尊大霸王'),array(67,'路宝'),array(2486,'民意'),array(68,'赛马'),array(392,'赛豹III'),array(481,'赛豹V'),array(3038,'中意V5')),
+			'其它'=>
+			array(array(100023,'中意'))
+),
+	"25"=>array(
+			'吉利汽车'=>
+			array(array(133,'豪情'),array(132,'美日'),array(138,'美人豹'),array(421,'优利欧'))
+),
+	"46"=>array(
+			'北京吉普'=>
+			array(array(291,'北京JEEP'),array(23,'大切诺基')),
+			'Jeep'=>
+			array(array(521,'大切诺基(进口)'),array(121,'牧马人'),array(263,'自由人'),array(503,'指挥官'),array(504,'指南者'),array(777,'自由客')),
+			'SRT'=>
+			array(array(3048,'大切诺基 SRT'))
+),
+	"44"=>array(
+			'捷豹'=>
+			array(array(178,'捷豹XJ'),array(258,'捷豹S-Type'),array(328,'捷豹X-Type'),array(456,'捷豹XK'),array(589,'捷豹XF'),array(2903,'捷豹F-TYPE'))
+),
+	"83"=>array(
+			'华晨金杯'=>
+			array(array(2659,'大力神'),array(2537,'阁瑞斯'),array(2601,'海星A7'),array(2711,'海星A9'),array(2712,'海星T20'),array(2837,'海星T22'),array(2810,'金杯海狮'),array(2660,'金典'),array(2545,'金杯大海狮'),array(2402,'金杯S50'),array(2665,'雷龙'),array(3136,'小海狮X30'),array(2325,'智尚S30'))
+),
+	"84"=>array(
+			'江淮汽车'=>
+			array(array(2745,'宝斯通'),array(567,'宾悦'),array(616,'和悦'),array(816,'和悦RS'),array(572,'瑞鹰'),array(2752,'瑞风S5'),array(2581,'瑞铃'),array(2541,'瑞风'),array(2543,'瑞风M5'),array(617,'同悦RS'),array(660,'同悦'),array(2569,'星锐'),array(828,'悦悦'))
+),
+	"175"=>array(
+			'厦门金旅'=>
+			array(array(2976,'金旅海狮'))
+),
+	"151"=>array(
+			'九龙汽车'=>
+			array(array(2582,'大MPV'),array(2573,'九龙A5'),array(2576,'九龙A6'))
+),
+	"119"=>array(
+			'江铃汽车'=>
+			array(array(2514,'宝典'),array(2674,'宝威'),array(2228,'驭胜'),array(2860,'域虎'))
+),
+	"104"=>array(
+			'吉利汽车'=>
+			array(array(2155,'全球鹰GC7'),array(989,'全球鹰GX7'),array(2192,'全球鹰GX2'),array(608,'熊猫'),array(474,'远景'),array(409,'自由舰'),array(611,'中国龙'))
+),
+	"105"=>array(
+			'吉利汽车'=>
+			array(array(799,'帝豪EC7'),array(800,'帝豪EC7-RV'),array(801,'帝豪EC8'))
+),
+	"106"=>array(
+			'吉利汽车'=>
+			array(array(609,'金鹰'),array(447,'金刚'),array(841,'英伦TX4'),array(2051,'英伦SC7'),array(2156,'英伦SC6'),array(2111,'英伦SC5-RV'),array(2964,'英伦SX7'),array(2840,'英伦SC3'))
+),
+	"156"=>array(
+			'卡尔森'=>
+			array(array(2610,'卡尔森 GL级'),array(2611,'卡尔森 S级'))
+),
+	"100"=>array(
+			'科尼赛克'=>
+			array(array(2068,'Agera'),array(731,'科尼赛克CCX'),array(732,'科尼赛克CCXR'))
+),
+	"101"=>array(
+			'开瑞汽车'=>
+			array(array(517,'优翼'),array(2476,'优优'),array(2484,'优雅'),array(2489,'优派'),array(2492,'优胜'),array(2493,'优胜II代'),array(2496,'优劲'),array(3156,'优雅2代'),array(3017,'优优2代'))
+),
+	"47"=>array(
+			'通用凯迪拉克'=>
+			array(array(2949,'凯迪拉克XTS'),array(970,'凯迪拉克CTS'),array(488,'SLS赛威')),
+			'凯迪拉克(进口)'=>
+			array(array(238,'帝威'),array(49,'凯迪拉克SRX'),array(311,'凯迪拉克CTS(进口)'),array(462,'凯雷德ESCALADE'),array(426,'凯迪拉克XLR'))
+),
+	"9"=>array(
+			'北京克莱斯勒'=>
+			array(array(566,'铂锐'),array(487,'克莱斯勒300C')),
+			'东南汽车'=>
+			array(array(227,'大捷龙')),
+			'克莱斯勒(进口)'=>
+			array(array(2207,'大捷龙(进口)'),array(222,'交叉火力'),array(342,'克莱斯勒300C(进口)'),array(380,'PT 漫步者'))
+),
+	"10"=>array(
+			'雷诺'=>
+			array(array(199,'风景'),array(908,'风朗'),array(686,'科雷傲'),array(188,'拉古那'),array(196,'梅甘娜'),array(2765,'塔利斯曼'),array(2184,'纬度'),array(257,'威赛帝'))
+),
+	"48"=>array(
+			'兰博基尼'=>
+			array(array(2277,'Aventador'),array(354,'Gallardo'),array(174,'Murcielago'),array(727,'Reventon'))
+),
+	"49"=>array(
+			'路虎'=>
+			array(array(802,'第四代发现'),array(72,'发现3'),array(69,'揽胜'),array(754,'揽胜极光'),array(850,'揽胜运动版'),array(77,'神行者2'),array(3177,'神行者'),array(256,'卫士'))
+),
+	"50"=>array(
+			'路特斯'=>
+			array(array(272,'Elise'),array(891,'Exige'),array(681,'Evora'))
+),
+	"51"=>array(
+			'林肯'=>
+			array(array(103,'城市'),array(95,'领航员'),array(758,'林肯MKX'),array(793,'林肯MKZ'),array(794,'林肯MKT'),array(869,'林肯MKS'))
+),
+	"52"=>array(
+			'雷克萨斯'=>
+			array(array(112,'雷克萨斯GX'),array(261,'雷克萨斯GS'),array(201,'雷克萨斯IS'),array(351,'雷克萨斯RX'),array(352,'雷克萨斯LX'),array(341,'雷克萨斯LS'),array(332,'雷克萨斯SC'),array(403,'雷克萨斯ES'),array(2063,'雷克萨斯CT'))
+),
+	"53"=>array(
+			'昌河铃木'=>
+			array(array(3216,'北斗星X5'),array(75,'北斗星'),array(432,'利亚纳'),array(2534,'浪迪'),array(2049,'派喜')),
+			'长安铃木'=>
+			array(array(872,'奥拓'),array(94,'羚羊'),array(529,'天语 SX4'),array(2242,'天语·尚悦'),array(362,'雨燕')),
+			'铃木(进口)'=>
+			array(array(500,'超级维特拉'),array(508,'吉姆尼'),array(892,'凯泽西'))
+),
+	"54"=>array(
+			'劳斯莱斯'=>
+			array(array(836,'古思特'),array(265,'幻影'))
+),
+	"88"=>array(
+			'陆风汽车'=>
+			array(array(468,'风尚'),array(571,'风华'),array(635,'陆风X9'),array(501,'陆风X6'),array(833,'陆风X8'),array(2883,'陆风X5'))
+),
+	"89"=>array(
+			'莲花汽车'=>
+			array(array(691,'竞悦'),array(583,'竞速'),array(928,'莲花L3'),array(2125,'莲花L5'))
+),
+	"80"=>array(
+			'重庆力帆'=>
+			array(array(2503,'丰顺'),array(2312,'力帆720'),array(2134,'力帆X60'),array(443,'力帆520'),array(596,'力帆620'),array(597,'力帆320'),array(2502,'兴顺'))
+),
+	"78"=>array(
+			'猎豹汽车'=>
+			array(array(706,'飞腾'),array(2520,'飞铃'),array(2521,'飞扬'),array(961,'黑金刚'),array(962,'猎豹6481'),array(815,'猎豹CS7'),array(569,'猎豹CS6'),array(3034,'猎豹CT5'),array(568,'骐菱')),
+			'其它'=>
+			array(array(100020,'猎豹'))
+),
+	"118"=>array(
+			'劳伦士'=>
+			array(array(2102,'劳伦士S级'),array(2103,'劳伦士M级'))
+),
+	"124"=>array(
+			'广汽本田'=>
+			array(array(2248,'理念S1'))
+),
+	"129"=>array(
+			'迈凯伦'=>
+			array(array(2293,'迈凯伦12C'),array(3024,'迈凯伦F1'))
+),
+	"168"=>array(
+			'摩根'=>
+			array(array(2835,'摩根Aero'),array(2836,'摩根Plus 8'),array(3151,'摩根Roadster'),array(3152,'摩根Plus 4'),array(3153,'摩根4-4'))
+),
+	"55"=>array(
+			'迈巴赫'=>
+			array(array(389,'迈巴赫'))
+),
+	"56"=>array(
+			'MINI'=>
+			array(array(209,'MINI'),array(904,'MINI COUPE'),array(930,'MINI ROADSTER'),array(749,'MINI CLUBMAN'),array(750,'MINI COUNTRYMAN'),array(2241,'MINI PACEMAN')),
+			'MINI JCW'=>
+			array(array(3178,'MINI JCW'),array(3179,'MINI JCW CLUBMAN'),array(3180,'MINI JCW COUPE'),array(3181,'MINI JCW COUNTRYMAN'),array(3182,'MINI JCW PACEMAN'))
+),
+	"57"=>array(
+			'玛莎拉蒂'=>
+			array(array(322,'Coupe'),array(903,'GranCabrio'),array(551,'GranTurismo'),array(191,'Spyder'),array(289,'总裁'))
+),
+	"58"=>array(
+			'长安马自达'=>
+			array(array(363,'马自达3'),array(433,'马自达2'),array(641,'马自达2劲翔'),array(2987,'马自达CX-5'),array(2418,'马自达3星骋')),
+			'一汽马自达'=>
+			array(array(2118,'马自达8'),array(22,'马自达6'),array(655,'睿翼')),
+			'马自达(进口)'=>
+			array(array(3096,'ATENZA(进口)'),array(1005,'马自达CX-9'),array(2391,'马自达CX-5(进口)'),array(658,'马自达CX-7(进口)'),array(672,'马自达MX-5'),array(584,'马自达3(进口)'),array(578,'马自达5'),array(295,'马自达RX-8'),array(304,'马自达8(进口)'))
+),
+	"20"=>array(
+			'上汽集团'=>
+			array(array(531,'MG7'),array(532,'MG5'),array(533,'MGTF'),array(555,'MG3SW'),array(835,'MG6'),array(2147,'MG3'))
+),
+	"130"=>array(
+			'东风裕隆'=>
+			array(array(3040,'大7 MPV'),array(2295,'大7 SUV'),array(2296,'MASTER CEO'),array(2988,'纳智捷 5 Sedan'))
+),
+	"146"=>array(
+			'一汽欧朗'=>
+			array(array(2563,'欧朗'))
+),
+	"59"=>array(
+			'欧宝'=>
+			array(array(670,'安德拉'),array(381,'赛飞利'),array(182,'威达'),array(348,'雅特'),array(653,'英速亚'))
+),
+	"60"=>array(
+			'讴歌'=>
+			array(array(524,'讴歌MDX'),array(464,'讴歌RL'),array(888,'讴歌RDX'),array(806,'讴歌ZDX'),array(479,'讴歌TL'),array(2748,'讴歌RLX'),array(2642,'讴歌ILX'))
+),
+	"62"=>array(
+			'东风悦达起亚'=>
+			array(array(813,'福瑞迪'),array(284,'嘉华'),array(142,'千里马'),array(2319,'起亚K2'),array(2246,'起亚K5'),array(2886,'起亚K3'),array(454,'RIO锐欧'),array(413,'赛拉图'),array(565,'狮跑'),array(876,'秀尔'),array(298,'远舰'),array(2137,'智跑')),
+			'起亚(进口)'=>
+			array(array(591,'霸锐'),array(453,'佳乐'),array(1010,'凯尊'),array(275,'欧菲莱斯'),array(502,'起亚VQ'),array(890,'起亚K5(进口)'),array(452,'SPORTAGE'),array(281,'索兰托'),array(1016,'速迈'))
+),
+	"26"=>array(
+			'奇瑞汽车'=>
+			array(array(2980,'艾瑞泽7'),array(2914,'爱卡'),array(451,'东方之子Cross'),array(83,'东方之子'),array(84,'风云'),array(837,'风云2'),array(854,'奇瑞X1'),array(518,'奇瑞A1'),array(530,'奇瑞A3'),array(612,'奇瑞QQme'),array(85,'旗云'),array(87,'奇瑞QQ3'),array(478,'奇瑞QQ6'),array(434,'奇瑞A5'),array(2953,'奇瑞E3'),array(2989,'奇瑞QQ'),array(2324,'奇瑞E5'),array(2331,'旗云5'),array(2178,'旗云2'),array(2180,'旗云3'),array(996,'旗云1'),array(396,'瑞虎'))
+),
+	"122"=>array(
+			'东风日产'=>
+			array(array(2341,'启辰D50'),array(2867,'启辰R50'))
+),
+	"103"=>array(
+			'奇瑞汽车'=>
+			array(array(853,'瑞麒M5'),array(804,'瑞麒M1'),array(797,'瑞麒G5'),array(791,'瑞麒G6'),array(2109,'瑞麒G3'))
+),
+	"174"=>array(
+			'如虎'=>
+			array(array(2970,'如虎 CTR 3'),array(2972,'如虎 XL'))
+),
+	"19"=>array(
+			'上汽集团'=>
+			array(array(2297,'荣威W5'),array(2062,'荣威350'),array(2743,'荣威950'),array(2779,'荣威E50'),array(482,'荣威750'),array(537,'荣威550'))
+),
+	"63"=>array(
+			'东风日产'=>
+			array(array(475,'骏逸'),array(63,'蓝鸟'),array(522,'骊威'),array(2381,'楼兰'),array(2086,'玛驰'),array(656,'奇骏'),array(425,'骐达'),array(634,'天籁'),array(564,'逍客'),array(448,'轩逸'),array(355,'颐达'),array(64,'阳光')),
+			'郑州日产'=>
+			array(array(53,'帕拉丁'),array(2113,'日产NV200'),array(2466,'日产D22'),array(2853,'日产ZN厢式车')),
+			'日产(进口)'=>
+			array(array(2578,'碧莲'),array(205,'风度'),array(376,'风雅'),array(438,'贵士'),array(958,'楼兰(海外)'),array(208,'奇骏(进口)'),array(436,'日产GT-R'),array(316,'日产350Z'),array(702,'日产370Z'),array(264,'途乐'),array(204,'西玛')),
+			'其它'=>
+			array(array(100018,'公爵王'))
+),
+	"64"=>array(
+			'萨博'=>
+			array(array(211,'Saab 9-5'),array(343,'Saab 9-3'))
+),
+	"65"=>array(
+			'斯巴鲁'=>
+			array(array(286,'傲虎'),array(414,'驰鹏'),array(287,'力狮'),array(285,'森林人'),array(2557,'斯巴鲁BRZ'),array(2417,'斯巴鲁XV'),array(283,'翼豹'))
+),
+	"66"=>array(
+			'世爵'=>
+			array(array(599,'世爵C8'))
+),
+	"67"=>array(
+			'上海大众斯柯达'=>
+			array(array(772,'昊锐'),array(382,'晶锐'),array(519,'明锐'),array(3171,'速派'),array(2962,'昕锐')),
+			'斯柯达(进口)'=>
+			array(array(357,'昊锐(进口)'),array(858,'Yeti(进口)'))
+),
+	"68"=>array(
+			'北京吉普'=>
+			array(array(25,'欧蓝德'),array(24,'帕杰罗速跑')),
+			'东南汽车'=>
+			array(array(3131,'风迪思'),array(483,'戈蓝'),array(668,'君阁'),array(128,'菱绅'),array(458,'蓝瑟'),array(873,'翼神')),
+			'广汽三菱'=>
+			array(array(2768,'劲炫ASX'),array(3008,'帕杰罗·劲畅'),array(377,'帕杰罗')),
+			'三菱(进口)'=>
+			array(array(1018,'ASX劲炫(进口)'),array(325,'格蓝迪'),array(369,'LANCER'),array(486,'欧蓝德(进口)'),array(580,'帕杰罗(进口)'),array(2332,'帕杰罗·劲畅(进口)'),array(651,'伊柯丽斯'))
+),
+	"69"=>array(
+			'双龙汽车'=>
+			array(array(455,'爱腾'),array(2214,'柯兰多'),array(3132,'雷斯特W'),array(139,'雷斯特'),array(516,'路帝'),array(485,'享御'),array(141,'主席'))
+),
+	"45"=>array(
+			'smart'=>
+			array(array(620,'smart fortwo'))
+),
+	"90"=>array(
+			'双环汽车'=>
+			array(array(13,'来宝SRV'),array(345,'双环SCEO'),array(506,'小贵族'))
+),
+	"173"=>array(
+			'北京汽车'=>
+			array(array(2787,'绅宝'))
+),
+	"149"=>array(
+			'陕汽通家'=>
+			array(array(2570,'福家'))
+),
+	"162"=>array(
+			'东风本田'=>
+			array(array(2751,'思铭'))
+),
+	"155"=>array(
+			'上汽商用车'=>
+			array(array(2608,'上汽大通V80'),array(3192,'伊思坦纳'))
+),
+	"167"=>array(
+			'庆铃汽车'=>
+			array(array(2834,'五十铃皮卡'))
+),
+	"114"=>array(
+			'上汽通用五菱'=>
+			array(array(2506,'PN货车'),array(2456,'五菱之光'),array(2139,'五菱宏光'),array(2451,'五菱荣光'),array(2855,'五菱荣光小卡'))
+),
+	"102"=>array(
+			'奇瑞汽车'=>
+			array(array(2538,'威麟H3'),array(2539,'威麟H5'),array(613,'威麟X5'),array(909,'威麟V5'))
+),
+	"99"=>array(
+			'威兹曼'=>
+			array(array(725,'威兹曼GT'),array(959,'威兹曼Roadster'))
+),
+	"70"=>array(
+			'长安沃尔沃'=>
+			array(array(463,'沃尔沃S40'),array(693,'沃尔沃S80L')),
+			'沃尔沃(进口)'=>
+			array(array(494,'沃尔沃C30'),array(585,'沃尔沃XC60'),array(404,'沃尔沃S60'),array(406,'沃尔沃C70'),array(175,'沃尔沃S80'),array(177,'沃尔沃XC90'),array(2190,'沃尔沃V60'),array(981,'沃尔沃S40(进口)'),array(2678,'沃尔沃V40'))
+),
+);
+$b = array_chunk($checi,30);
+$query = mysql_connect("localhost","root","") or die('数据库链接失败');
+mysql_select_db('thor');
+mysql_query('set names utf8');
+//print_r($a);
+foreach($b as $a){
+foreach($a as $k=>$v){
+	foreach($v as $key=>$val){
+		$sql = 'SELECT id  FROM p2p_car WHERE key=0 AND name="'.$key.'" AND fid='.$k.' AND level=1';
+		$result = mysql_query($sql);
+		if(!empty($result)){
+			while($row = mysql_fetch_assoc($result)){
+				$getID = $row['id'];
+				foreach($val as $x=>$y){
+					$sql1 = 'SELECT id  FROM p2p_car WHERE key='.$y[0].' AND name="'.$y[1].'" AND fid='.$getID.' AND level=2';
+					$result1 = mysql_query($sql1);
+					if(empty($result1)){
+						$sql = 'INSERT INTO p2p_car(`key`,`name`,`fid`,`level`) VALUES ('.$y[0].',"'.$y[1].'",'.$getID.',2)';
+						$result = mysql_query($sql);
+					}
+				}
+				
+			}
+
+		}else{
+			$sql = 'INSERT INTO p2p_car(`key`,`name`,`fid`,`level`) VALUES (0,"'.$key.'",'.$k.',1)';
+			$result = mysql_query($sql);
+			$getID = mysql_insert_id();
+			foreach($val as $x=>$y){
+				$sql = 'INSERT INTO p2p_car(`key`,`name`,`fid`,`level`) VALUES ('.$y[0].',"'.$y[1].'",'.$getID.',2)'; 
+				$result = mysql_query($sql);
+			}
+		}
+	}
+}
+}

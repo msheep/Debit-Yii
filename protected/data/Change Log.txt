@@ -1,0 +1,121 @@
+﻿-- ---------Change Log----------------------
+-- --新增user表lastLoginTime（上次登录时间）和currentLoginTime（本次登录时间）--9/12--lizheng--
+ALTER TABLE p2p_user ADD lastLoginTime datetime NOT NULL DEFAULT 0 COMMENT '上次登录时间';
+ALTER TABLE p2p_user ADD currentLoginTime datetime NOT NULL DEFAULT 0 COMMENT '本次登录时间';
+ALTER TABLE p2p_user ADD nickName varchar(100) NOT NULL DEFAULT '' COMMENT '昵称';
+ALTER TABLE p2p_user ADD email varchar(100) NOT NULL DEFAULT '' COMMENT '邮箱';
+ALTER TABLE p2p_user ADD passwordStrength tinyint(1) NOT NULL DEFAULT 0 COMMENT '密码强度:0低1中2高。。。';
+ALTER TABLE p2p_user ADD avatar int(11) NOT NULL DEFAULT 0 COMMENT '照片,关联file表id';
+ALTER TABLE p2p_resident_auth CHANGE cats cars TINYINT(1) NOT NULL DEFAULT 0 COMMENT '车辆状况';
+-- --------------------------------------------------------------------------
+-- --新增p2p_mobile_auth表，手机实名认证表----user表新增手机实名认证状态字段--9/12--lizheng-------
+DROP TABLE IF EXISTS `p2p_mobile_auth`;
+CREATE TABLE `p2p_mobile_auth` (
+  `userId` int(11) NOT NULL DEFAULT '0' COMMENT '用户id',
+  `realName` varchar(20) NOT NULL DEFAULT '' COMMENT '手机实名',
+  `mobile` varchar(11) NOT NULL DEFAULT '' COMMENT '手机号',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '认证状态：0未认证1已认证',
+  `ctime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '创建时间',
+  `operatorId` int(11) NOT NULL DEFAULT '0' COMMENT '操作人',
+  PRIMARY KEY (`userId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+ALTER TABLE p2p_user ADD mobileAuth tinyint(1) NOT NULL DEFAULT 0 COMMENT '认证状态：0未认证1已认证';
+-- --------------------------------------------------------------------------
+-- --p2p_resident_auth表地区id数据类型修改，hourseholdAddress字段名称修改--9/12--lizheng----
+ALTER TABLE p2p_resident_auth CHANGE hourseholdAddress householdAddress varchar(100) NOT NULL DEFAULT '' COMMENT '户口所在地详细地址';
+ALTER TABLE p2p_resident_auth CHANGE householdProvinceId householdProvinceId char(6) NOT NULL DEFAULT '' COMMENT '户口所在地省';
+ALTER TABLE p2p_resident_auth CHANGE householdCityId householdCityId char(6) NOT NULL DEFAULT '' COMMENT '户口所在地市';
+ALTER TABLE p2p_resident_auth CHANGE householdAreaId householdAreaId char(6) NOT NULL DEFAULT '' COMMENT '户口所在地区';
+ALTER TABLE p2p_resident_auth CHANGE liveProvinceId liveProvinceId char(6) NOT NULL DEFAULT '' COMMENT '居住地省';
+ALTER TABLE p2p_resident_auth CHANGE liveCityId liveCityId char(6) NOT NULL DEFAULT '' COMMENT '居住地市';
+ALTER TABLE p2p_resident_auth CHANGE liveAreaId liveAreaId char(6) NOT NULL DEFAULT '' COMMENT '居住地区';
+-- --------------------------------------------------------------------------
+-- --p2p_file表新增relateId字段，表示文件关联的数据id，由category觉得关联的哪个表的id--9/17--lizheng----
+ALTER TABLE p2p_file ADD relateId int(11) NOT NULL DEFAULT 0 COMMENT '关联id，由category决定关联对象';
+-- --------------------------------------------------------------------------
+-- --新增p2p_bank_card用户绑定银行卡表，记录用户已经绑定的银行卡号----------------9/18--lizheng----
+DROP TABLE IF EXISTS `p2p_bank_card`;
+CREATE TABLE `p2p_bank_card` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `card` varchar(20) NOT NULL DEFAULT '' COMMENT '卡号',
+  `type` tinyint(2) NOT NULL DEFAULT '0' COMMENT '开户银行:1工商，2交通，3中国，4建设，5招商。。。。',
+  `bankName` varchar(50) NOT NULL DEFAULT '' COMMENT '开户银行名称',
+  `ownerName` varchar(20) NOT NULL DEFAULT '' COMMENT '持卡人姓名',
+  `ctime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '创建时间',
+  `userId` int(11) NOT NULL DEFAULT '0' COMMENT '用户id',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-- --------------------------------------------------------------------------
+-- --提现申请表p2p_withdraw_apply新增银行卡字段：bankCardId--提现到账类型字段：type--修改提现申请表id为自增字段--p2p_user表新增支付密码字段---9/18--lizheng----
+ALTER TABLE p2p_withdraw_apply ADD bankCardId int(11) NOT NULL DEFAULT 0 COMMENT '提现目标银行卡id';
+ALTER TABLE p2p_withdraw_apply ADD type tinyint(1) NOT NULL DEFAULT 0 COMMENT '提现到账类型：0次日到账。。。（待定）';
+ALTER TABLE p2p_withdraw_apply CHANGE id id int(11) NOT NULL AUTO_INCREMENT COMMENT '提现表主键';
+ALTER TABLE p2p_user ADD payPassword varchar(100) NOT NULL DEFAULT '' COMMENT '支付密码';
+-- --------------------------------------------------------------------------
+-- --收入支出表p2p_income_payout_detail修改orderNo字段(增大长度)---9/22-------lizheng----
+ALTER TABLE p2p_income_payout_detail CHANGE orderNo orderNo varchar(50) DEFAULT NULL COMMENT '充值类型时指代充值的流水账号';
+-- --------------------------------------------------------------------------
+-- --收入支出表p2p_income_payout_detail新增withdrawApplyId字段:提现类型时关联提现申请单id---9/22-------lizheng----
+ALTER TABLE p2p_income_payout_detail ADD withdrawApplyId int(11) DEFAULT NULL COMMENT '提现类型时指代提现申请单id';
+-- --------------------------------------------------------------------------
+-- --修改表p2p_block_money_detail,新增category字段------------------------------9/23--------lizheng----
+DROP TABLE IF EXISTS `p2p_block_money_detail`;
+CREATE TABLE `p2p_block_money_detail` (
+`id`  int(11) NOT NULL AUTO_INCREMENT ,
+`status`  tinyint(1) NOT NULL DEFAULT 0 COMMENT '0冻结1解除冻结' ,
+`money`  double(10,2) NOT NULL DEFAULT 0.00 COMMENT '支出金额' ,
+`debitId`  int(11) NOT NULL DEFAULT 0 COMMENT '还款类型下指代借款明细' ,
+`debitFinancingId`  int(11) NOT NULL DEFAULT 0 COMMENT '借贷明细表id（）' ,
+`userId`  int(10) NOT NULL DEFAULT 0 COMMENT '出账人' ,
+`startTime`  datetime NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '冻结开始' ,
+`endTime`  datetime NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '冻结结束' ,
+`category`  tinyint(1) NOT NULL DEFAULT 0 COMMENT '冻结类型:0投资冻结1提现冻结' ,
+`withdrawApplyId`  int(11) NOT NULL DEFAULT 0 COMMENT '类型为提现时指代提现申请id' ,
+PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8;
+-- --------------------------------------------------------------------------------------------
+-- --修改表p2p_user,新增creditRating信用等级字段;rank会员等级;支付密码强度-------------------------9/23--------lizheng----
+ALTER TABLE p2p_user ADD creditRating tinyint(1) NOT NULL DEFAULT 0 COMMENT '信用等级:0:AAA,1:AA...';
+ALTER TABLE p2p_user ADD rank tinyint(1) NOT NULL DEFAULT 0 COMMENT '会员等级:0:普通会员,1:XXX....';
+ALTER TABLE p2p_user ADD payPasswordStrength tinyint(1) NOT NULL DEFAULT 0 COMMENT '密码强度:0低1中2高。。。';
+-- --------------------------------------------------------------------------------------------
+-- --新增安全保护问题表p2p_security_question-----------------------------------------9/23------------lizheng-----
+DROP TABLE IF EXISTS `p2p_security_question`;
+CREATE TABLE `p2p_security_question` (
+  `userId` int(11) NOT NULL,
+  `question` varchar(50) NOT NULL DEFAULT '' COMMENT '提问内容',
+  `answer` varchar(50) NOT NULL DEFAULT '' COMMENT '回答',
+  `ctime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '创建时间',
+  `utime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '更新时间',
+  PRIMARY KEY (`userId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-- ---------------------------------------------------------------------------------------------------
+-- --用户消息表p2p_user_notify修改-----------------------------------------9/26------------lizheng-----
+ALTER TABLE p2p_user_notify ADD fromId int(11) NOT NULL DEFAULT 0 COMMENT '发件人id(管理员或者用户)';
+ALTER TABLE p2p_user_notify ADD type tinyint(1) NOT NULL DEFAULT 0 COMMENT '发件人类型:0管理员(oauth_admin表)1用户(user表)';
+ALTER TABLE p2p_user_notify ADD delFlag tinyint(1) NOT NULL DEFAULT 0 COMMENT '删除标记:0正常1删除';
+-- ---------------------------------------------------------------------------------------------------
+-- --认证表新增表新增驳回原因字段-----------------------------------------9/30------------lizheng-----
+ALTER TABLE p2p_mobile_auth ADD comment varchar(255) NOT NULL DEFAULT '' COMMENT '驳回原因';
+ALTER TABLE p2p_identity_auth ADD comment varchar(255) NOT NULL DEFAULT '' COMMENT '驳回原因';
+ALTER TABLE p2p_resident_auth ADD comment varchar(255) NOT NULL DEFAULT '' COMMENT '驳回原因';
+ALTER TABLE p2p_education_auth ADD comment varchar(255) NOT NULL DEFAULT '' COMMENT '驳回原因';
+ALTER TABLE p2p_video_auth ADD comment varchar(255) NOT NULL DEFAULT '' COMMENT '驳回原因';
+-- ---------------------------------------------------------------------------------------------------
+-- --用户表新增待还金额字段-----------------------------------------10/09------------lizheng-----
+ALTER TABLE p2p_user ADD refundMoney double(10,2) NOT NULL DEFAULT 0.00 COMMENT '待还金额';
+-- ---------------------------------------------------------------------------------------------------
+-- --文件表新增文件名称,删除标记-----------------------------------------10/12------------lizheng-----
+ALTER TABLE p2p_file ADD delFlag tinyint(1) NOT NULL DEFAULT 0 COMMENT '删除标记:0正常1删除';
+ALTER TABLE p2p_file ADD fileName varchar(255) NOT NULL DEFAULT '' COMMENT '文件原名';
+-- ---------------------------------------------------------------------------------------------------
+-- --提现申请表新增审核不通过理由-----------------------------------------10/14------------lizheng-----
+ALTER TABLE p2p_withdraw_apply ADD comment varchar(255) NOT NULL DEFAULT '' COMMENT '审核不通过理由';
+ALTER TABLE p2p_withdraw_apply ADD account varchar(255) NOT NULL DEFAULT '' COMMENT '提现目标账号:支付宝类型时为支付宝账号';
+ALTER TABLE p2p_income_payout_detail ADD nowCashMoney double(10,2) NOT NULL DEFAULT 0.00 COMMENT '账户当前现金余额';
+ALTER TABLE p2p_income_payout_detail ADD nowBlockMoney double(10,2) NOT NULL DEFAULT 0.00 COMMENT '账户当前冻结余额';
+-- ---------------------------------------------------------------------------------------------------
+-- --用户表新增最后更新时间字段-----------------------------------------10/14------------lizheng-----
+ALTER TABLE p2p_user ADD utime datetime NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '最后更新时间';
+ALTER TABLE p2p_user ADD incomingMoney double(10,2) NOT NULL DEFAULT 0.00 COMMENT '待收金额';
+-- ---------------------------------------------------------------------------------------------------

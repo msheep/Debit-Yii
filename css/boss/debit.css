@@ -1,0 +1,124 @@
+@CHARSET "UTF-8";
+/* 借贷详情页 */
+.detail .table-title td{
+    font-weight: bold;
+}
+.detail .fix-table{
+    position: fixed;
+    z-index: 9;
+    bottom: 0px;
+    filter:alpha(opacity=80); 
+    -moz-opacity:0.8; 
+    opacity:0.8;
+}
+.detail .upfile {
+    cursor: pointer;
+    left: -270px;
+    opacity: 0;
+    width: 270px !important;
+}
+.detail .pass,.nopass{
+    display: none;
+}
+legend{
+    margin-bottom: 5px;
+    font-size: 13px;
+    line-hright: 25px;
+    text-align: center;
+}
+.detail .upload_drag_area{
+    display:inline-block; 
+    width:80%; 
+    padding:1em 0; 
+    margin-top: 1em; 
+    border:1px dashed #ddd; 
+    color:#999; 
+    text-align:center; 
+    vertical-align:middle;
+    min-height: 250px;
+}
+.detail .upload_append_list{
+    height:250px; 
+    padding:0 1em; 
+    float:left; 
+    position:relative;
+}
+.detail .upload_delete{
+    margin-left:2em;
+}
+.detail .upload_image{
+    max-height:220px; 
+    max-width:320px;
+}
+.detail .pass-left{
+    width: 50%;
+    text-align: right;
+}
+.detail .pass-right{
+    width: 50%;
+    text-align: left;
+}
+.detail .uploadify,.detail .uploadify-queue{
+    margin-bottom: 0px;
+}
+.detail .uploadify-queue-item{
+    margin-top: 10px;
+}
+.detail .text{
+    text-align: left;
+    width: 80%;
+}
+.detail .text .part{
+    margin-right: 20px;
+}
+.detail .text-title{
+   width: 10%;
+   font-weight: bold;
+}
+.errorMessage{
+    color: red;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+/* 分页页码样式 */
+.pager .next > a, .pager .next > span{
+    float:none;
+}
+.pager .previous > a, .pager .previous > span{
+    float:none;
+}
+.tableStatic{
+    width: 100%;
+}
+.datatable-footer{
+    border-bottom: 1px solid #DDDDDD;
+}
+.yiiPager {
+    border-radius: 3px 3px 3px 3px;
+    overflow: hidden;
+}
+.yiiPager li {
+    float: left;
+    list-style: none outside none;
+    margin-top: 0px;
+}
+.yiiPager a {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-width: 1px solid #DDDDDD;
+    color: #888888;
+    display: block;
+    padding: 9px 11px;
+    text-decoration: none;
+    line-height: 8px;
+    height: 8px;
+    font-size: 12px;
+}
+.yiiPager a:hover {
+    color: #0EB8FF;
+}
+.yiiPager .selected a {
+    background: none repeat scroll 0 0 #F5F5F5;
+    color: #D7140A;
+    font-weight: bold;
+}
